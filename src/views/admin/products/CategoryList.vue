@@ -50,9 +50,17 @@ export default defineComponent({
           attribute: 'number_of_products',
           name: 'number of products'
         }
-      ]
+      ],
+  
     }
+   
   },
+ created() {
+        fetch('http://localhost:3000/items')
+          .then(res => res.json())
+          .then(data => this.items = data)
+          .catch(err => console.log(err))
+      },
   methods: {
     fetchUsers(): void {
       let token = this.$store.state.bearerToken
@@ -65,8 +73,6 @@ export default defineComponent({
       this.isModalOn = true
     }
   },
-  async mounted() {
-    this.fetchUsers()
-  },
+ 
 });
 </script>

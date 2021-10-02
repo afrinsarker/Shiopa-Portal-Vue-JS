@@ -40,7 +40,7 @@
               <td 
                 data-label="Action"
                 class="w-full lg:w-auto px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <router-link :to="{ name: 'RoleUpdate', params: { id: item.id } }" class="text-indigo-600 hover:text-indigo-900 mr-2">Edit</router-link>
+                <router-link :to="{ name: 'UserCreate', params: { id: item.id } }" class="text-indigo-600 hover:text-indigo-900 mr-2">Edit</router-link>
                 <button @click="deleteSupplier(item.id)" class="text-indigo-600 hover:text-indigo-900 mr-2">Delete</button>
               </td>
             </tr>

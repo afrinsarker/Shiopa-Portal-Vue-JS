@@ -13,10 +13,11 @@
                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 {{ column.name }}
               </th>
-              <th scope="col" class="relative px-6 py-3">
-                <span class="sr-only">Actions</span>
+              <th scope="col" class="relative px-6 py-3 text-right font-medium text-xs text-gray-500 uppercase tracking-wider">
+                Actions
               </th>
             </tr>
+            
           </thead>
           <tbody class="divide-y divide-gray-200">
             <tr v-for="(item, i) in sortedItems" :key="i" class="bg-white flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
@@ -29,14 +30,14 @@
                   {{ item[textColumn.attribute] }}
                 </div>
               </td>
-              <td 
-                v-for="(image, k) in imageColumn" 
-                :key="k" class="w-full lg:w-auto px-6 py-4 whitespace-nowrap"
-                :data-label="imageColumn.attribute">
-                <div class="flex-shrink-0 h-10 w-10">
-                  <img class="h-10 w-10 rounded-full" :src="item[image.attribute]" alt="" />
-                </div>
-              </td>
+                 <td 
+                  v-for="(image, k) in imageColumn" 
+                  :key="k" class="w-full lg:w-auto px-6 py-4 whitespace-nowrap"
+                  :data-label="imageColumn.attribute">
+                  <div class="flex-shrink-0 h-10 w-10">
+                    <img class="h-10 w-10 rounded-full" :src="item[image.attribute]" alt="" />
+                  </div>
+                </td>
               <td 
                 data-label="Action"
                 class="w-full lg:w-auto px-6 py-4 whitespace-nowrap text-right text-sm font-medium">

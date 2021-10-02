@@ -260,15 +260,5 @@ const router = createRouter({
   routes
 })
 
-router.beforeEach((to, from, next) => {
-  if (to.meta.auth && !isAuthenticated && !hasToken) {
-    next('/')
-    // } else if (to.name === "GuestLogin" && isAuthenticated && hasToken) {
-    //   next('/dashboard')
-  } else {
-    next()
-  }
-
-})
 
 export default router

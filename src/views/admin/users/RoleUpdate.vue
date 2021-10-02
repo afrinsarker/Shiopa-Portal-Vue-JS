@@ -14,7 +14,6 @@ import { defineComponent } from 'vue';
 import CheckboxTable from '@/components/tables/CheckboxTable.vue'
 import DataService from "@/services/DataService";
 import ResponseData from "@/types/ResponseData";
-
 export default defineComponent({
   name: 'RoleUpdate',
   components: {
